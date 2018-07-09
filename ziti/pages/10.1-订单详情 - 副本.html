@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
+<link rel="stylesheet" href="../assets/css/zpui.css"/>
+<link rel="stylesheet" href="../assets/css/all.css"/>
+<link rel="stylesheet" href="../assets/css/all.css"/>
+<script src="../assets/js/page.js"></script>
+
+    <title> 编码录入 </title>
+</head>
+<style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #wrap {
+            margin:auto;
+            width: 300px;
+        }
+        #wrap input[type=text]{
+            width:30px;
+            height:20px;
+            float:left;
+            text-align:center;
+        }
+    </style>
+<body>
+<div class="page">
+    <div class="page-hd">
+        <div class="header bor-1px-b">
+    <div class="header-left">
+        <a href="javascript:history.go(-1)" class="left-arrow"></a>
+    </div>
+    <div class="header-title">编码录入</div>
+    <div class="header-right">
+        <a href="#"></a>
+    </div>
+</div>
+    </div>
+
+    <div class="page-bd">
+        <div class="backf padding-60">
+            <div class="weui-cell">
+                <div class="weui-cell__bd"><span class="fs28 font-600">订单核销编码</span></div>
+                <div class="weui-cell__ft"><span class="images-45"><img src="../assets/images/codeset.png"></span></div>
+            </div>
+            <div class="pwd-box">
+                <input type="tel" maxlength="8" class="pwd-input" id="pwd-input">
+                <div class="fake-box">
+                    <input type="text" readonly="">
+                    <input type="text" readonly="">
+                    <input type="text" readonly="">
+                    <input type="text" readonly="">
+                    <input type="text" readonly="">
+                    <input type="text" readonly="">
+                    <input type="text" readonly="">
+                    <input type="text" readonly="">
+                </div>
+            </div>
+        </div>
+        <div class="guly"><a href="#" class="button-an">进行核销</a></div>
+    </div>
+
+</div>
+
+
+
+
+<script src="../assets/js/lib/jquery-2.1.4.js"></script>
+<script src="../assets/js/jquery-weui.min.js"></script>
+
+<script src="../assets/js/lib/jquery.min.2.1.3.js"></script>
+<script src="../assets/js/lib/weui.min.js"></script>
+<script src="../assets/js/comm.js"></script>
+
+<script>
+    var $input = $(".fake-box input");
+    $("#pwd-input").on("input", function() {
+        var pwd = $(this).val().trim();
+        for (var i = 0, len = pwd.length; i < len; i++) {
+            $input.eq("" + i + "").val(pwd[i]);
+        }
+        $input.each(function() {
+            var index = $(this).index();
+            if (index >= len) {
+                $(this).val("");
+            }
+        });
+        if (len == 8) {
+            //执行其他操作
+        }
+    });
+</script>
+
+
+
+<!-- <script>
+
+    $(".yter").keyup(function(){
+        var str = $(this).val();
+        var len =  str.length;
+        if(len>=6){
+            return 
+        }
+       
+    });
+        $(function () {
+          $(".i-text").keyup(function()
+          {
+              console.log('asdfsaf');
+            var inp_v = $(this).val();
+            var inp_l = inp_v.length;
+
+            for( var x = 0; x<=6; x++)
+            {
+              $("p").html( inp_l );
+      
+              $(".sixDigitPassword").find("i").eq( inp_l ).addClass("active").siblings("i").removeClass("active");
+              $(".sixDigitPassword").find("i").eq( inp_l ).prevAll("i").find("b").css({"display":"block"});
+              $(".sixDigitPassword").find("i").eq( inp_l - 1 ).nextAll("i").find("b").css({"display":"none"});
+      
+              $(".guangbiao").css({"left":inp_l * 51});
+      
+              if( inp_l == 0)
+              {
+                $(".sixDigitPassword").find("i").eq( 0 ).addClass("active").siblings("i").removeClass("active");
+                $(".sixDigitPassword").find("b").css({"display":"none"});
+                $(".guangbiao").css({"left":0});
+              }
+              else if( inp_l == 6)
+              {
+                $(".sixDigitPassword").find("b").css({"display":"block"});
+                $(".sixDigitPassword").find("i").eq(5).addClass("active").siblings("i").removeClass("active");
+                $(".guangbiao").css({"left":5 * 51});
+              }
+      
+      
+            }
+          });
+        })
+      </script> -->
+      
+
+
+
+</body>
+</html>
