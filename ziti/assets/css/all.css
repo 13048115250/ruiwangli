@@ -298,7 +298,6 @@
   font-size: 0.12rem;
   opacity: 0;
   letter-spacing: 0.233333rem;
-  box-shadow: 0!important;
   outline: none;
   color: transparent;
 }
@@ -307,13 +306,13 @@
   width: 0.466667rem;
   height: 0.533333rem;
   border: none;
+  box-shadow: 0 6px 13px rgba(0, 0, 0, 0) !important;
   background: #fff;
-  padding: 0!important;
-  border: 1px solid #e5e5e5;
   text-align: center;
   font-size: 0.2rem;
   margin-right: 0.053333rem;
-  outline: none;
+  padding-top: 0.1rem;
+  outline: none!important;
 }
 
 .fake-box input:nth-child(8) {
