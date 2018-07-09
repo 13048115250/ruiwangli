@@ -14,7 +14,7 @@
   background: #f8584f;
   color: #fff;
   font-size: 0.126667rem;
-  padding: 0.026667rem 0.033333rem;
+  padding: 0.013333rem 0.033333rem;
   border-radius: 0.033333rem;
   overflow: hidden;
 }
@@ -48,7 +48,7 @@
   color: #f29b76;
   border-radius: 0.02rem;
   font-size: 0.14rem;
-  padding: 0.02rem 0.046667rem;
+  padding: 0.006667rem 0.046667rem;
 }
 
 .weui-switch:before,
@@ -66,12 +66,19 @@
 .weui-switch:after,
 .weui-switch-cp__box:after {
   top: 0.02rem;
+  left: 0.02rem;
 }
 
 .weui-switch:checked:after,
 .weui-switch-cp__input:checked ~ .weui-switch-cp__box:after {
-  -webkit-transform: translateX(14px);
-          transform: translateX(14px);
+  -webkit-transform: translateX(12px);
+          transform: translateX(12px);
+}
+
+.weui-cell_access .weui-cell__ft:after {
+  width: 7px;
+  height: 7px;
+  border-color: #b1b1b1;
 }
 
 .backf {
@@ -312,7 +319,6 @@
   text-align: center;
   font-size: 0.2rem;
   margin-right: 0.053333rem;
-  padding-top: 0.1rem;
   outline: none!important;
 }
 
@@ -352,4 +358,21 @@
   width: 94%;
   margin: 0 auto;
   margin-top: 0.2rem;
+}
+
+.gulyw {
+  width: 100%;
+  border: 0;
+  outline: none;
+  padding: 0.1rem 0;
+  text-align: center;
+  border-bottom: 0.006667rem solid #e5e5e5;
+}
+
+.font-none {
+  font-weight: 100;
+}
+
+.color7 {
+  color: #7f7f7f;
 }
