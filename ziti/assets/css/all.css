@@ -297,8 +297,9 @@
   border: none;
   font-size: 0.12rem;
   opacity: 0;
-  z-index: 1;
   letter-spacing: 0.233333rem;
+  box-shadow: 0!important;
+  outline: none;
 }
 
 .fake-box input {
@@ -309,8 +310,8 @@
   border: 0.006667rem solid #e5e5e5;
   text-align: center;
   font-size: 0.2rem;
-  background: none;
   margin-right: 0.053333rem;
+  outline: none;
 }
 
 .fake-box input:nth-child(8) {
